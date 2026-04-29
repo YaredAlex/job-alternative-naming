@@ -1,1 +1,105 @@
-{"alternative_position": ["Executive Assistant", "Mobile Money Agent", "Children's Book Author", "Quran Teacher", "Pastry Chef", "Nail and Eyelash Technician", "Administrative Assistant", "Voiceover Artist", "Cement Artisan", "Quran Teacher", "Video Editor", "Voice Actor", "Aluminum Fabricator", "Content Writer", "Craft Artist", "Call Center Agent", "Content Writer", "Landscaper", "Kitchen Assistant", "Beauty Technician"], "reason": ["Executive issue likely refers to handling executive matters, similar to an executive assistant role.", "CBE Birr Operator manages mobile money transactions, equivalent to a mobile money agent.", "Creating children's fairy tales aligns with being a children's book author.", "Reciting the Quran is a key duty of a Quran teacher.", "Making desserts like baklava and halawa is typical for a pastry chef.", "Professions involving nails and eyelashes are done by nail and eyelash technicians.", "Combining receptionist, packing, and driving duties fits an administrative assistant role.", "Making audio recordings in multiple languages is the work of a voiceover artist.", "Producing vases and accessories from cement is done by a cement artisan.", "Teaching and reciting the Quran is the role of a Quran teacher.", "The role involves editing a YouTube show, which aligns with video editing tasks.", "Narrator is a type of voice actor providing spoken commentary.", "Expert in aluminum work typically involves fabrication or welding.", "Combines Amharic text writing with design, fitting content creation.", "Making shapes from paper, fabric, and raw materials is craft artistry.", "Answering phone calls for ride and delivery services is a call center role.", "Arabic speaking writer focuses on written content in Arabic.", "Artificial grass installation is a landscaping task.", "Assistant juicer is a kitchen helper role in food preparation.", "Teaching nail and eyelash techniques is a beauty education role."], "next_index": 20}
+{
+  "alternative_position": [
+    {
+      "titles_en": "Executive issue",
+      "alternative_position": "Executive Assistant",
+      "reason": "Executive issue likely refers to handling executive matters, similar to an executive assistant role."
+    },
+    {
+      "titles_en": "CBE Birr Operator",
+      "alternative_position": "Payment Systems Operator",
+      "reason": "CBE Birr is a mobile payment system in Ethiopia; operator manages transactions."
+    },
+    {
+      "titles_en": "A creator of children's fairy tales and able to write fairy tales",
+      "alternative_position": "Children's Book Author",
+      "reason": "Creating fairy tales for children aligns with authoring children's books."
+    },
+    {
+      "titles_en": "teacher who can recite the Qur'an",
+      "alternative_position": "Quran Teacher",
+      "reason": "Reciting and teaching the Quran is the role of a Quran teacher."
+    },
+    {
+      "titles_en": "A maker of desserts, mainly baklava, halawa and mushebek",
+      "alternative_position": "Pastry Chef",
+      "reason": "Making desserts like baklava and halawa is typical for a pastry chef."
+    },
+    {
+      "titles_en": "nails and eyelashes  professions",
+      "alternative_position": "Nail and Eyelash Technician",
+      "reason": "Professions involving nails and eyelashes are beauty technician roles."
+    },
+    {
+      "titles_en": "A receptionist who packs goods and drives a car",
+      "alternative_position": "Receptionist and Driver",
+      "reason": "Combines receptionist duties with packing goods and driving."
+    },
+    {
+      "titles_en": "A volunteer who can make audio recordings in Aramaic, Tigrinya and English",
+      "alternative_position": "Audio Transcriber",
+      "reason": "Making audio recordings in multiple languages is transcription work."
+    },
+    {
+      "titles_en": "Able to produce vases and other accessories made of cement",
+      "alternative_position": "Cement Artisan",
+      "reason": "Producing vases and accessories from cement is artisan work."
+    },
+    {
+      "titles_en": "Able to teach and recite the Qur'an",
+      "alternative_position": "Quran Teacher",
+      "reason": "Teaching and reciting the Quran is the role of a Quran teacher."
+    },
+    {
+      "titles_en": "Acting and editing a YouTube show for a new film and theater group",
+      "alternative_position": "Video Editor",
+      "reason": "Involves editing a YouTube show, which is core to video editing."
+    },
+    {
+      "titles_en": "narrator",
+      "alternative_position": "Voice Actor",
+      "reason": "Narrator is a type of voice actor, common in Ethiopian media."
+    },
+    {
+      "titles_en": "Aluminum expert",
+      "alternative_position": "Metal Fabricator",
+      "reason": "Aluminum expert works with metal fabrication, relevant in Ethiopian construction."
+    },
+    {
+      "titles_en": "Amharic text writer and photoshop designer",
+      "alternative_position": "Content Writer",
+      "reason": "Combines Amharic writing and Photoshop design, typical for content creation."
+    },
+    {
+      "titles_en": "An expert who can make shapes with paper, fabric and different raw materials",
+      "alternative_position": "Craft Artist",
+      "reason": "Making shapes from paper, fabric, and raw materials is craft artistry."
+    },
+    {
+      "titles_en": "Answering phone calls for ride and delivery work",
+      "alternative_position": "Call Center Agent",
+      "reason": "Answering phone calls for ride and delivery is a call center role."
+    },
+    {
+      "titles_en": "Arabic speaking writer",
+      "alternative_position": "Content Writer",
+      "reason": "Arabic speaking writer is a content writer specializing in Arabic."
+    },
+    {
+      "titles_en": "Artificial grass",
+      "alternative_position": "Landscaper",
+      "reason": "Artificial grass installation is a landscaping task in Ethiopia."
+    },
+    {
+      "titles_en": "Assistant juicer",
+      "alternative_position": "Kitchen Assistant",
+      "reason": "Assistant juicer is a kitchen helper role in food service."
+    },
+    {
+      "titles_en": "Assistant Professor of Nail and Eyelash",
+      "alternative_position": "Beauty Technician",
+      "reason": "Assistant Professor of Nail and Eyelash is a beauty education role."
+    }
+  ],
+  "next_index": 20
+}

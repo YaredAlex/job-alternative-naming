@@ -1,3 +1,5 @@
+
+
 import os
 import json
 import time
@@ -45,24 +47,21 @@ Format:
 # CHECKPOINT METHODS
 # -----------------------------
 def save_checkpoint(
-    alternative_positions: List[str],
-    reasons: List[str],
+    records: List[Dict[str, str]],
     next_index: int
 ) -> None:
     data = {
-        "alternative_position": alternative_positions,
-        "reason": reasons,
+        "alternative_position": records,
         "next_index": next_index,
     }
-    with open(CHECKPOINT_PATH, "w" ,encoding="utf-8") as f:
-        json.dump(data, f)
+    with open(CHECKPOINT_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def load_checkpoint() -> Dict[str, Any]:
     if not os.path.exists(CHECKPOINT_PATH):
         return {
             "alternative_position": [],
-            "reason": [],
             "next_index": 0
         }
 
@@ -147,34 +146,41 @@ def process_positions() -> None:
     checkpoint = load_checkpoint()
 
     start_index: int = checkpoint["next_index"]
-    saved_alternatives: List[str] = checkpoint["alternative_position"]
-    saved_reasons: List[str] = checkpoint["reason"]
+    saved_records: List[Dict[str, str]] = checkpoint["alternative_position"]
 
     total = len(df)
 
     print(f"Starting from index: {start_index} / {total}")
 
     for i in range(start_index, total, BATCH_SIZE):
-        batch_titles = df["title_en"].iloc[i: i + BATCH_SIZE].tolist()
+        batch_df = df.iloc[i: i + BATCH_SIZE]
+        batch_titles = batch_df["title_en"].tolist()
 
         result = send_batch_to_agent(batch_titles)
 
-        for j, idx in enumerate(range(i, min(i + BATCH_SIZE, total))):
+        for j, (idx, row) in enumerate(batch_df.iterrows()):
             key = str(j)
 
+            title = row["title_en"]
             alt_position = result.get(key, {}).get("alternative_position", "")
             reason = result.get(key, {}).get("reason", "")
 
-            df.at[idx, "alternative_position"] = alt_position
-            df.at[idx, "reason"] = reason
+            # ✅ Ensure title match before writing
+            if df.at[idx, "title_en"] == title:
+                df.at[idx, "alternative_position"] = alt_position
+                df.at[idx, "reason"] = reason
 
-            saved_alternatives.append(alt_position)
-            saved_reasons.append(reason)
+            # Save structured checkpoint record
+            saved_records.append({
+                "titles_en": title,
+                "alternative_position": alt_position,
+                "reason": reason
+            })
 
         next_index = i + BATCH_SIZE
 
         # Save checkpoint
-        save_checkpoint(saved_alternatives, saved_reasons, next_index)
+        save_checkpoint(saved_records, next_index)
 
         # Save CSV progress
         df.to_csv(FILE_PATH, index=False)
