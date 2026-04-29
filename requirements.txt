@@ -1,0 +1,20 @@
+# use typehint to create methods
+# react-agent to make desition to closes job position. the position are given in ethiopian context and a very short description why it mapped it to the alternative_position.
+# make a system prompt defining that positions are in ethiopian context and only to return json format for request position use the index as id to make it easy for reading, caching and saving processed file
+# react-agent using langgraph use deepseek as agent assistant.
+# the column name in umatched_titles file is "title_en"
+# at every batch print completed number of position and remening postion 
+# for attempt in range(1, _MAX_RETRIES + 1):
+#         resp = session.post(nel_url, json=payload, headers=headers, timeout=120)
+#         if resp.status_code == 429 or resp.status_code >= 500:
+#             if attempt == _MAX_RETRIES:
+#                 resp.raise_for_status()
+#             print(f"\n  [{resp.status_code}] Retrying in {delay:.0f}s ({attempt}/{_MAX_RETRIES})...", end="", flush=True)
+#             time.sleep(delay)
+#             delay *= 2
+#             continue
+# method to save_checkpoint with json file like {"alternative_position":alternative_position,"next_index":next_index}
+# method to load_checkpoint from checkpoint_path load dumped json to resume from where it left
+# method to send request to agent with batch and returned alternative_position for the send request
+# after complete itteration of batch save the the data in the same csv file with additional column as alternative_position
+# declare all environment variable at the top including file_path,api_key, batch_size,
