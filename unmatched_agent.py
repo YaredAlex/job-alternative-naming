@@ -14,7 +14,7 @@ import requests
 FILE_PATH: str = "unmatched_titles.csv"
 API_KEY: str = "sk-72232c49afad491687b41477b4fbe874"
 BASE_URL: str = "https://api.deepseek.com/v1/chat/completions"
-MODEL_NAME: str = "deepseek-chat"
+MODEL_NAME: str = "deepseek-v4-flash"
 
 BATCH_SIZE: int = 10
 CHECKPOINT_PATH: str = "checkpoint.json"
@@ -44,7 +44,7 @@ Format:
 
 
 # -----------------------------
-# CHECKPOINT METHODS
+# CHECKPOINT
 # -----------------------------
 def save_checkpoint(
     records: List[Dict[str, str]],
@@ -102,7 +102,7 @@ def post_with_retry(payload: Dict[str, Any]) -> Dict[str, Any]:
 
 
 # -----------------------------
-# AGENT REQUEST METHOD
+# AGENT REQUEST
 # -----------------------------
 def send_batch_to_agent(batch: List[str]) -> Dict[str, Any]:
     user_prompt = "Map the following job titles:\n"
@@ -131,7 +131,7 @@ def send_batch_to_agent(batch: List[str]) -> Dict[str, Any]:
 
 
 # -----------------------------
-# MAIN PROCESS
+# MAIN
 # -----------------------------
 def process_positions() -> None:
     df = pd.read_csv(FILE_PATH)
@@ -194,8 +194,6 @@ def process_positions() -> None:
     print("Processing completed!")
 
 
-# -----------------------------
-# ENTRY POINT
-# -----------------------------
+
 if __name__ == "__main__":
     process_positions()
