@@ -11,12 +11,12 @@ import requests
 # -----------------------------
 # ENV VARIABLES (CONFIG)
 # -----------------------------
-FILE_PATH: str = "unmatched_titles.csv"
+FILE_PATH: str = "unmatched_titles_4k.csv"
 API_KEY: str = "sk-72232c49afad491687b41477b4fbe874"
 BASE_URL: str = "https://api.deepseek.com/v1/chat/completions"
 MODEL_NAME: str = "deepseek-v4-flash"
 
-BATCH_SIZE: int = 10
+BATCH_SIZE: int = 20
 CHECKPOINT_PATH: str = "checkpoint.json"
 
 _MAX_RETRIES: int = 5
